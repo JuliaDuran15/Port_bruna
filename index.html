@@ -1,162 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bruna Furquin | Currículos & Mentoria</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
-    <header class="fade-in">
-      <div class="container">
-        <h1>Bruna Furquin</h1>
-        <p class="subtitle">Transformando perfis em oportunidades</p>
-        <nav>
-          <a href="#home">Início</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#depoimentos">Depoimentos</a>
-          <a href="#contato">Contato</a>
-        </nav>
+  <header class="header">
+    <a href="#home" class="logo">Bruna <span>Furquin</span></a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home">Bruna Furquin</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+      <a href="#" id="theme-toggle" aria-label="Alternar modo claro/escuro">
+        <i class="bx bx-moon" id="theme-icon"></i>
+      </a>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <div class="home-content">
+      <h1>Olá, sou <span>Bruna</span></h1>
+      <h3 class="text-animation">Sou <span></span></h3>
+      <p>Formada pela UNESP Bauru e ofereço currículos profissionais e mentorias com foco em confiança, clareza e resultados.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/brunafurquim/?originalSubdomain=br" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+      <a href="https://www.instagram.com/bsfurquim/" target="_blank" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="https://www.facebook.com/brunafurquin/" target="_blank" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+      <a href="https://wa.me/5511972356287" target="_blank" aria-label="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
       </div>
-    </header>
-  
-    <section id="home" class="fade-in section-accent center reveal">
-      <div class="container">
-        <div class="hero">
-          <img src="img/bruna-foto.png" alt="Foto de Bruna Furquin"  class="foto-bruna reveal">
-          <div class="hero-text">
-            <h2 class="reveal-left">Destaque-se no mercado de trabalho</h2>
-            <p class="reveal">Currículos profissionais e mentorias com foco em confiança, clareza e resultados.</p>
-            <p class="reveal">Atendimento personalizado com Bruna Furquin, formada pela UNESP Bauru.</p>
-            <a class="btn" href="#contato">Agende sua consultoria gratuita</a>
-          </div>
+      <div class="btn-group">
+        <a href="#contato" class="btn">Entre em contato</a>
+      </div>
+    </div>
+    <div class="home-img">
+      <img src="img/bruna.jpg" alt="Foto de Bruna Furquin sorrindo" />
+    </div>
+  </section>
+
+  <section id="sobre" class="education">
+    <h2 class="heading">Sobre mim</h2>
+    <div class="timeline-items">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2024</div>
+        <div class="timeline-content">
+          <h3>Formação</h3>
+          <p>Graduada em Relações Internacionais pela UNESP Bauru.</p>
         </div>
       </div>
-    </section>
-  
-    <section id="sobre" class="fade-in">
-      <div class="container sobre-box">
-        <img src="img/bruna-escritorio.jpg" alt="Bruna no escritório" class="foto-bruna reveal">
-        <div>
-          <h2 class="reveal-left">Prazer, sou a Bruna</h2>
-          <p class="reveal-delay">Sou formada pela UNESP – campus Bauru e trabalho com foco em desenvolvimento profissional e empregabilidade. Acredito que todo perfil tem potencial para se destacar quando bem apresentado. Por isso, criei um método próprio de criação de currículos e preparo para entrevistas que já ajudou diversas pessoas a conquistarem seus objetivos profissionais.</p>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2024</div>
+        <div class="timeline-content">
+          <h3>Estágio</h3>
+          <p>Experiência em projetos voltados à área de desenvolvimento profissional e acadêmico.</p>
         </div>
       </div>
-    </section>
-  
-    <section id="servicos" class="fade-in section-light reveal">
-      <div class="container">
-        <h2 class="reveal-right">Como posso ajudar você</h2>
-        <ul class="servicos">
-          <li><strong>Criação de Currículo Profissional:</strong> personalizados e alinhados com seu objetivo.</li>
-          <li><strong>Mentoria para Entrevistas:</strong> simulações e estratégias práticas.</li>
-          <li><strong>Ajuste de Perfil no LinkedIn:</strong> visibilidade e atração de recrutadores.</li>
-        </ul>
-      </div>
-    </section>
-  
-    <section id="projetos" class="fade-in reveal">
-      <div class="container">
-        <h2>Exemplos de Projetos</h2>
-        <div class="galeria reveal-up">
-            <figure class="galeria-item reveal-stagger">
-              <img 
-                src="img/curriculo1.png" 
-                alt="Descrição 1" 
-                class="galeria-img"
-                loading="lazy"
-                width="600" 
-                height="400"
-              >
-              <figcaption class="galeria-caption">
-                Título da Imagem 1
-              </figcaption>
-            </figure>
-          
-            <figure class="galeria-item reveal-stagger">
-              <img 
-              src="img/curriculo2.png" 
-              alt="Descrição 2" 
-                class="galeria-img"
-                loading="lazy"
-                width="600" 
-                height="400"
-              >
-              <figcaption class="galeria-caption">
-                Título da Imagem 2
-              </figcaption>
-            </figure>
 
-            <figure class="galeria-item reveal-stagger">
-                <img 
-                src="img/curriculo3.png" 
-                alt="Descrição 3" 
-                  class="galeria-img"
-                  loading="lazy"
-                  width="600" 
-                  height="400"
-                >
-                <figcaption class="galeria-caption">
-                  Título da Imagem 3
-                </figcaption>
-              </figure>
-          </div>
-      </div>
-    </section>
-  
-    <section id="depoimentos" class="fade-in reveal">
-      <div class="container">
-        <h2 class="reveal">Depoimentos</h2>
-        <blockquote class="reveal-left">“A Bruna me ajudou a enxergar meu potencial e me preparar com confiança para a entrevista. Fui contratada na semana seguinte!” – <cite>Ana Paula</cite></blockquote>
-        <blockquote class="reveal-right">“O currículo feito pela Bruna chamou atenção logo na primeira semana. Recebi três contatos de recrutadores.” – <cite>João Marcos</cite></blockquote>
-      </div>
-    </section>
-  
-    <section id="contato" class="fade-in section-accent reveal">
-        <div class="container">
-            <h2 class="reveal-up">Vamos conversar?</h2>
-            <p>Preencha o formulário ou envie um e-mail:</p>
-          <ul class="links">
-            <li>Email: <a href="mailto:brunafurquin@email.com">brunafurquin@email.com</a></li>
-            <li>LinkedIn: <a href="#">linkedin.com/in/brunafurquin</a></li>
-            <li>Instagram: <a href="#">@brunafurquin</a></li>
-          </ul>
-          <form>
-            <input type="text" placeholder="Nome" required />
-            <input type="email" placeholder="E-mail" required />
-            <textarea placeholder="Mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-          </form>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2025</div>
+        <div class="timeline-content">
+          <h3>Trabalho</h3>
+          <p>Atuação com foco em mentoria de carreira e criação de currículos personalizados.</p>
         </div>
-      </section>
-  
-    <footer class="fade-in">
-      <div class="container">
-        <p>© 2025 Bruna Furquin – Todos os direitos reservados.</p>
-        <p>Desenvolvido com propósito e profissionalismo.</p>
       </div>
-    </footer>
-    <script>
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        }, { threshold: 0.1 });
-      
-        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-up, .reveal-delay').forEach(el => {
-          observer.observe(el);
-        });
+    </div>
+  </section>
 
+  <section id="servicos" class="services">
+    <h2 class="heading">Serviços</h2>
+    <div class="services-container">
+      <div class="service-box">
+        <div class="service-info">
+          <h4>Currículo Profissional</h4>
+          <p>Criação de currículos personalizados e impactantes.</p>
+        </div>
+      </div>
 
-      </script>
-      
-      
-  </body>
-  </html>
+      <div class="service-box">
+        <div class="service-info">
+          <h4>Mentoria para Entrevistas</h4>
+          <p>Preparação e simulações para entrevistas de emprego.</p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-info">
+          <h4>Ajuste de Perfil no LinkedIn</h4>
+          <p>Otimização do perfil para atrair recrutadores.</p>
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="service-info">
+          <h4>Consultoria de Currículo</h4>
+          <p>Elaboração e revisão para destacar suas habilidades.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos" class="projects">
+    <h2 class="heading">Projetos</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="img/projeto1.png" alt="Imagem do projeto de revisão de currículos" />
+        </div>
+        <div class="project-info">
+          <h3>Revisão Profissional de Currículos</h3>
+          <p>Otimização de currículos alinhados ao mercado de trabalho atual.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="img/projeto2.png" alt="Imagem do projeto de mentorias individuais" />
+        </div>
+        <div class="project-info">
+          <h3>Mentorias Individuais</h3>
+          <p>Sessões práticas para desenvolvimento de marca pessoal, plano de carreira e comunicação eficaz.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="img/projeto3.png" alt="Imagem do workshop para universitárias" />
+        </div>
+        <div class="project-info">
+          <h3>Workshops para Universitárias</h3>
+          <p>Eventos sobre autoconhecimento, networking e estratégias para o início da carreira profissional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="testimonials">
+    <div class="testimonials-box">
+      <h2 class="heading">Depoimentos</h2>
+      <div class="testimonial-items">
+        <div class="testimonial-item">
+          <p>"Excelente atendimento e suporte. Consegui meu primeiro emprego graças ao currículo revisado!"</p>
+          <span>— Ana Souza</span>
+        </div>
+        <div class="testimonial-item">
+          <p>"Muito profissional, entregou antes do prazo e com qualidade superior ao esperado."</p>
+          <span>— Rafael Lima</span>
+        </div>
+        <div class="testimonial-item">
+          <p>"Muito profissional, entregou antes do prazo e com qualidade superior ao esperado."</p>
+          <span>— Rafael Lima</span>
+        </div>
+        <div class="testimonial-item">
+          <p>"Muito profissional, entregou antes do prazo e com qualidade superior ao esperado."</p>
+          <span>— Rafael Lima</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <h2 class="heading">Vamos <span>conversar?</span></h2>
+  
+<form method="POST" action="https://formsubmit.co/leitorairritada@gmail.com">
+  <input type="hidden" name="_captcha" value="false">
+  
+  <div class="input-group">
+    <div class="input-box">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+    </div>
+    <div class="input-box">
+      <input type="text" name="phone" placeholder="Phone" />
+      <input type="text" name="subject" placeholder="Subject" />
+    </div>
+  </div>
+  <div class="input-group-2">
+    <textarea name="message" placeholder="Message" rows="10" required></textarea>
+    <input type="submit" value="Send" class="btn" />
+  </div>
+</form>
+  </section>
+  
+
+  <footer class="footer">
+    <div class="social">
+      <a href="https://www.linkedin.com/in/brunafurquim/?originalSubdomain=br" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+    <a href="https://www.instagram.com/bsfurquim/" target="_blank" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+    <a href="https://www.facebook.com/brunafurquin/" target="_blank" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+    <a href="https://wa.me/5511972356287" target="_blank" aria-label="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+    </div>
+    <ul class="list">
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Sobre mim</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#">Depoimentos</a></li>
+    </ul>
+    <p class="copyright">
+      © 2025 Bruna Furquin | Todos os direitos reservados. Desenvolvido com propósito e profissionalismo.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
