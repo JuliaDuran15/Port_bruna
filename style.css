@@ -247,7 +247,7 @@ span {
   content: "Consultora";
   color: var(--main-color);
   overflow: hidden;
-  animation: words 15s infinite;
+  animation: words 20s infinite;
 }
 
 .text-animation span::after {
@@ -259,12 +259,12 @@ span {
   height: 100%;
   border-left: 3px solid var(--main-color);
   right: -8px;
-  animation:typing 15s steps(24) infinite, cursor 0.6s steps(1) infinite;
+  animation:typing 20s steps(24) infinite, cursor 0.6s infinite;
 }
 
 @keyframes cursor {
   to{
-    border-left: 2px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
   }
 }
 
