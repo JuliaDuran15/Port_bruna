@@ -1,9 +1,8 @@
-/* Importar fontes elegantes */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Telegraf', 'Poppins', 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,21 +12,21 @@
   scroll-behavior: smooth;
 }
 
-:root{
-  /* Paleta de cores sóbria */
-  --bg-color: #1C1C1C;          /* Carvão escuro */
-  --second-bg-color: #282828;    /* Cinza grafite */
-  --text-color: #E1E1E1;        /* Cinza claro */
-  --main-color: #5A9E99;        /* Verde petróleo suave */
-  --accent-color: #3F665F;      /* Verde musgo escuro */
+:root {
+  /* Tema escuro (padrão) */
+  --bg-color: #181818;         /* Fundo principal escuro */
+  --second-bg-color: #222222;  /* Fundo secundário */
+  --text-color: #ffffff;       /* Texto em fundo escuro */
+  --main-color: #89a9b4;       /* Azul claro para títulos/destaques */
+  --accent-color: #c8c0b6;     /* Bege para detalhes menores */
 }
 
 .light-mode {
-  --bg-color: #f5f3ef;
-  --text-color: #2e2e2e;
-  --main-color: #b4555a;       /* Rosa queimado / vermelho terroso: elegante e marcante */
-  --second-bg-color: #ffffff;
-  --accent-color: #d9a5a5;     /* Bege rosado para detalhes */
+  --bg-color: #ffffff;         /* Fundo branco */
+  --second-bg-color: #f5f3ef;  /* Fundo alternativo claro */
+  --text-color: #181818;       /* Texto escuro em fundo branco */
+  --main-color: #89a9b4;       /* Azul claro */
+  --accent-color: #c8c0b6;     /* Bege */
 }
 
 /* Verde Musgo  main-color: #556b2f  accent-color: #a6a98a*/
@@ -56,6 +55,20 @@ header {
   display: flex;
   z-index: 6;
   
+}
+
+.logo img {
+  height: 70px; /* maior que o padrão */
+  object-fit: contain;
+  display: block;
+  margin-top: -10px; /* sobe um pouco sem aumentar o header */
+  margin-bottom: -10px;
+  filter: drop-shadow(0 0 5px var(--main-color));
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
 }
 
 .logo {
@@ -324,6 +337,30 @@ span {
   margin-bottom: 5rem;
 }
 
+.sobre-box {
+  background-color: var(--bg-color);
+  padding: 3rem 4rem;
+  border: 3px solid var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 15px var(--main-color);
+  margin: 0 auto 5rem;
+  max-width: 1000px;
+  text-align: justify;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sobre-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+.sobre-box p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
 .timeline-items {
   position: relative;
   margin:auto;
@@ -433,41 +470,60 @@ span {
 
 
 .service-box {
-  background-color: var(--main-color);
-  height: 300px;
+  display: flex;
+  height: 350px;
+    flex-direction: row;
   border-radius: 3rem;
+  overflow: hidden;
+  background-color: var(--main-color);
   border: 5px solid transparent;
-  cursor: pointer;
   transition: 0.3s ease-in-out;
+}
+
+.service-box.reverse {
+  direction: rtl;
 }
 
 .service-box:hover {
   background: white;
-  color:black;
+  color: black;
   transform: scale(1.03);
   border: 5px solid var(--main-color);
 }
 
-.service-box, .service-info {
+/* Imagem do serviço */
+.service-img {
+  width: 50%;
+  object-fit: cover;
+  height: 100%;
+  display: block;
+}
+
+/* Texto */
+.service-info {
+  width: 50%;
+  padding: 2rem;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
-  align-items: center;
-  padding: 1rem 1rem;
 }
 
 .service-info h4 {
   font-size: 2.5rem;
   font-weight: 800;
-  line-height: 2;
+  line-height: 1.4;
 }
 
 .service-info p {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.7;
-  margin: auto;
+}
+
+.service-info span {
+  font-weight: 800;
+  color: black;
 }
 
 .testimonials {
@@ -492,20 +548,14 @@ span {
   align-items: center;
 }
 
-
 .testimonial-item {
-  position: relative;
   background: var(--bg-color);
   border: 2px solid var(--main-color);
-  padding: 2rem 3rem;
   border-radius: 2rem;
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  box-shadow: 0 0 10px var(--main-color);
+  overflow: hidden;
+  box-shadow: 0 0 15px var(--main-color);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
-  
 }
 
 .testimonial-item:hover {
@@ -513,16 +563,25 @@ span {
   box-shadow: 0 0 25px var(--main-color);
 }
 
-
-.testimonial-item p {
-  font-size: 1.8rem;
-  line-height: 1.6;
-  color: var(--text-color);
+.testimonial-image img {
+  width: 100%;
+  height: 200px; /* maior destaque visual */
+ object-fit: fill;
 }
 
-.testimonial-item span {
+.testimonial-info {
+  padding: 2rem;
+}
+
+.testimonial-info p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.testimonial-info span {
   display: block;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-weight: 600;
   font-size: 1.6rem;
   color: var(--main-color);
@@ -714,17 +773,79 @@ span {
 }
 
 
-
 @media (max-width: 1285px) {
   .home {
     font-size: 55%;
   }
-  .services-container{
-    grid-template-columns: repeat(2,1fr);
+
+}
+
+/* Telas até 991px: tablets e dispositivos menores */
+@media (max-width: 991px) {
+  header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .timeline-items::before {
+    left: 7px;
+  }
+
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+  }
+
+  .timeline-dot {
+    left: 0;
+  }
+
+  .services {
     padding-bottom: 7rem;
-    margin: 0 5rem;
+  }
+
+  .testimonials .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact form {
+    flex-direction: column;
+  }
+
+  .footer {
+    padding: 2rem 3%;
   }
 }
+
+/* NOVO: Ajustes específicos para telas com proporção 3:4 */
+@media (max-aspect-ratio: 3/4) {
+  .home {
+    font-size: 50%;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+    margin: 0 2rem;
+  }
+
+  .timeline-item {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  section {
+    padding: 8rem 2% 2rem;
+  }
+}
+
 
 @media (max-width: 991px) {
   header {
@@ -818,8 +939,25 @@ span {
     grid-template-columns: repeat(1,1fr);
 
   }
+  
   }
-@media (max-width: 765px) {
+@media (max-width: 768px) {
+
+  html {
+    font-size: 50%;
+  }
+  .home {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .services-container,
+  .testimonial-items {
+    grid-template-columns: 1fr;
+  }
+  header {
+    padding: 2rem 6%;
+  }
+
   h1 {
     font-size: 1.75rem;
   }
@@ -829,12 +967,33 @@ span {
   .testimonials .testimonial-items {
     grid-template-columns: repeat(1,1fr);
   }
+    .service-info h4 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
   
 }
 
 @media (max-width: 480px) {
 
+  .service-info h4 {
+    font-size: 1.8rem;
+  }
+
+  .service-info p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .services h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+
   .grid {
     grid-template-columns: 1fr;
   }
+  
 }
