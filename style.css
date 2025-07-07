@@ -151,7 +151,7 @@ span {
 
 .home-content h3{
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
@@ -181,9 +181,9 @@ span {
 }
 
 .home-content p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   line-height: 1.8;
   max-width: 1000px;
 }
@@ -253,75 +253,11 @@ span {
   font-weight: 600;
   min-width: 300px;
 }
+
 .text-animation span {
-  position: relative;
-}
-.text-animation span::before {
-  content: "Consultora";
+
   color: var(--main-color);
-  overflow: hidden;
-  animation: words 20s infinite;
 }
-
-.text-animation span::after {
-  content: "";
-  color: var(--main-color);
-  background-color: var(--bg-color);
-  position: absolute;
-  width: calc(100% + 8px);
-  height: 100%;
-  border-left: 3px solid var(--main-color);
-  right: -8px;
-  animation:typing 20s steps(24) infinite, cursor 0.6s infinite;
-}
-
-@keyframes cursor {
-  to{
-    border-left: 3px solid var(--main-color);
-  }
-}
-
-@keyframes words {
-  0%, 20% {
-    content: "Consultora";
-  }
-  21%, 40% {
-    content: "Especialista em Currículos";
-  }
-  41%, 60% {
-    content: "Redatora de Currículo";
-  }
-  61%, 80% {
-    content: "Mentora de Carreira";
-  }
-  81%,100% {
-    content: "Personal Branding Specialist";}
-  }
-
-@keyframes typing {
-    10%,
-    15%,
-    30%,
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95% {
-      width: 0;
-    }
-    5%,
-    20%,
-    25%,
-    40%,
-    45%,
-    60%,
-    65%,
-    80%,
-    85%,
-    100% {
-      width: calc(100%+8px);
-    }}
 
 .heading {
   font-size: 8rem;
@@ -452,79 +388,74 @@ span {
 }
 
 .services {
-  color: black;
-  background: var(--bg-color);
+  background: var(--second-bg-color);
+  padding: 100px 12%;
+  color: var(--text-color);
 }
 
-.services h2 {
-  margin-bottom: 5rem;
-  color: var(--text-color)  ;
-}
+
 
 .services-container {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  align-items: center;
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 3rem;
 }
-
 
 .service-box {
   display: flex;
-  height: 350px;
-    flex-direction: row;
-  border-radius: 3rem;
-  overflow: hidden;
-  background-color: var(--main-color);
-  border: 5px solid transparent;
-  transition: 0.3s ease-in-out;
-}
-
-.service-box.reverse {
-  direction: rtl;
+  align-items: center;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .service-box:hover {
-  background: white;
-  color: black;
-  transform: scale(1.03);
-  border: 5px solid var(--main-color);
+  transform: scale(1.02);
 }
 
-/* Imagem do serviço */
 .service-img {
-  width: 50%;
+  width: 180px;
+  height: 250px;
+  border-radius: 1.5rem;
   object-fit: cover;
-  height: 100%;
-  display: block;
+  flex-shrink: 0;
 }
 
-/* Texto */
 .service-info {
-  width: 50%;
-  padding: 2rem;
-  text-align: left;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 .service-info h4 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1.4;
+  font-size: 2.4rem; /* ⬅️ aumenta o tamanho da fonte */
+  color: var(--main-color);
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+
 }
 
 .service-info p {
   font-size: 1.6rem;
-  font-weight: 600;
   line-height: 1.7;
+  font-weight: 400;
+  color: var(--text-color);
+  text-align: left; 
 }
 
-.service-info span {
-  font-weight: 800;
-  color: black;
+.service-info p strong {
+  font-weight: 700;
 }
+
 
 .testimonials {
   padding: 100px 15px;
@@ -632,6 +563,45 @@ span {
 .contact form .btn{
   margin-top: 2rem;
 }
+
+.faq {
+  background: var(--second-bg-color);
+  padding: 100px 12%;
+  color: var(--text-color);
+}
+
+.faq h2 {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.faq-item {
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 2rem;
+  padding: 2.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+  font-size: 2rem;
+  color: var(--main-color);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.faq-answer {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
 
 .footer{
   position: relative;
@@ -968,8 +938,8 @@ span {
     grid-template-columns: repeat(1,1fr);
   }
     .service-info h4 {
-    font-size: 2rem;
-    line-height: 1.4;
+    font-size: 2.5rem;
+    
   }
 
   
