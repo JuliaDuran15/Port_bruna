@@ -412,6 +412,8 @@ span {
   transition: transform 0.3s ease;
   gap: 2rem;
   flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .service-box:hover {
@@ -456,6 +458,27 @@ span {
   font-weight: 700;
 }
 
+.service-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--bg-color);
+  background-color: var(--main-color);
+  border-radius: 3rem;
+  text-decoration: none;
+  box-shadow: 0 0 20px var(--main-color);
+  transition: 0.3s ease-in-out;
+}
+
+.service-button:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  transform: scale(1.05);
+  box-shadow: 0 0 30px var(--main-color);
+}
 
 .testimonials {
   padding: 100px 15px;
@@ -743,6 +766,38 @@ span {
 }
 
 
+/* Outras telas  */
+.service-detail {
+  max-width: 1000px;
+  margin: 12rem auto 5rem;
+  padding: 4rem;
+  background: var(--second-bg-color);
+  border-radius: 3rem;
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.6rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-detail:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 35px var(--main-color);
+}
+
+.service-detail h1 {
+  font-size: 4rem;
+  color: var(--main-color);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.service-detail p {
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 1285px) {
   .home {
     font-size: 55%;
@@ -954,23 +1009,29 @@ span {
   }
 
   .services-container {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    justify-items: center;
+  padding: 2.5rem 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
   }
 
-  .service-box {
-    background-color: var(--bg-color);
-    border: 2px solid var(--main-color);
-    border-radius: 2.5rem;
-    padding: 2.5rem 2rem;
-    box-shadow: 0 0 15px var(--main-color);
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    width: 100%;
-    gap: 1.5rem;
-  }
+  .services {
+  width: 100%;
+}
+
+
+.service-box {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 2.5rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 0 15px var(--main-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
   .service-img {
     width: 100%;

@@ -10,34 +10,36 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar.classList.toggle("active");
   };
 
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
+  const themeToggle = document.getElementById("theme-toggle");
+  const themeIcon = document.getElementById("theme-icon");
   const html = document.documentElement;
-  const logoImg = document.querySelector('.logo img');
+  const logoImg = document.querySelector(".logo img");
 
   const setLogo = (theme) => {
-    logoImg.src = theme === 'light' ? 'img/logo_black.png' : 'img/logo_white.png';
+    logoImg.src = theme === "light" ? "../img/logo_black.png" : "../img/logo_white.png";
   };
 
   // Carrega o tema salvo
-  if (localStorage.getItem('theme') === 'light') {
-    html.classList.add('light-mode');
-    themeIcon.classList.replace('bx-moon', 'bx-sun');
-    setLogo('light');
+  if (localStorage.getItem("theme") === "light") {
+    html.classList.add("light-mode");
+    themeIcon.classList.replace("bx-moon", "bx-sun");
+    setLogo("light");
   } else {
-    setLogo('dark'); // tema padrão escuro
+    setLogo("dark"); // tema padrão escuro
   }
 
-  themeToggle.addEventListener('click', () => {
-    html.classList.toggle('light-mode');
-    const isLight = html.classList.contains('light-mode');
-    themeIcon.classList.replace(isLight ? 'bx-moon' : 'bx-sun', isLight ? 'bx-sun' : 'bx-moon');
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  // Alternar tema
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      html.classList.toggle("light-mode");
+      const isLight = html.classList.contains("light-mode");
+      themeIcon.classList.replace(isLight ? "bx-moon" : "bx-sun", isLight ? "bx-sun" : "bx-moon");
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+      setLogo(isLight ? "light" : "dark");
+    });
 
-    setLogo(isLight ? 'light' : 'dark');
 
-  });
-
+    
   const updateActiveLink = () => {
     const scrollY = window.scrollY;
 
@@ -62,5 +64,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", updateActiveLink);
 
- 
+  }
 });
