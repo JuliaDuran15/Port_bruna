@@ -389,7 +389,7 @@ span {
 
 .services {
   background: var(--second-bg-color);
-  padding: 100px 12%;
+  padding: 100px 4%;
   color: var(--text-color);
 }
 
